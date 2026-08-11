@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>The Next Shelf · L.I.M.E. S18 War Room</title>
+<meta name="description" content="Team working room for the HUL L.I.M.E. Season 18 Kissan case." />
+<meta name="theme-color" content="#E31B23" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%23E31B23'/><rect x='30' y='22' width='40' height='16' rx='4' fill='%23fff'/><rect x='24' y='38' width='52' height='42' rx='8' fill='%23fff'/></svg>" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div id="boot" class="boot">
+  <div class="boot-mark">kissan</div>
+  <div class="boot-line">Opening the war room…</div>
+</div>
+
+<div class="app" id="app" hidden>
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="rail" id="rail">
+    <div class="rail-top">
+      <div class="brandmark">
+        <span class="brandmark-word">kissan</span>
+        <span class="brandmark-sub">L.I.M.E. S18 · War Room</span>
+      </div>
+      <button class="rail-close icon-btn" id="railClose" aria-label="Close menu">✕</button>
+    </div>
+    <nav class="nav" id="nav" aria-label="Sections"></nav>
+    <div class="rail-foot">
+      <div class="mode-chip" id="modeChip">…</div>
+    </div>
+  </aside>
+  <div class="scrim" id="scrim" hidden></div>
+
+  <!-- ============ MAIN ============ -->
+  <div class="main">
+    <header class="topbar">
+      <button class="icon-btn menu-btn" id="railOpen" aria-label="Open menu">☰</button>
+      <div class="crumb" id="crumb">Dashboard</div>
+      <div class="topbar-right">
+        <button class="ghost-btn" id="searchBtn" title="Search everything (Ctrl / ⌘ + K)"><span>⌕</span> Search</button>
+        <div class="presence" id="presence" title="Who's here right now"></div>
+        <div class="save-state" id="saveState" data-state="idle">Saved</div>
+        <button class="icon-btn" id="themeBtn" aria-label="Switch theme">◐</button>
+        <button class="who" id="whoBtn" title="Change your name">·</button>
+      </div>
+    </header>
+
+    <main class="stage" id="stage" tabindex="-1"></main>
+  </div>
+</div>
+
+<!-- ============ SEARCH PALETTE ============ -->
+<div class="palette" id="palette" hidden>
+  <div class="palette-box">
+    <input id="paletteInput" type="search" placeholder="Search every note, quote, idea and task…" autocomplete="off" />
+    <div class="palette-results" id="paletteResults"></div>
+    <div class="palette-foot"><kbd>esc</kbd> to close · <kbd>↑</kbd><kbd>↓</kbd> to move · <kbd>↵</kbd> to open</div>
+  </div>
+</div>
+
+<div class="toast-wrap" id="toasts"></div>
+
+<!-- Firebase (only used if you fill in js/config.js) -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<script src="js/config.js"></script>
+<script src="js/schema.js"></script>
+<script src="js/seed.js"></script>
+<script src="js/store.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/views.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
