@@ -28,6 +28,7 @@
   --shadow:0 1px 2px rgba(26,22,20,.05), 0 8px 24px -14px rgba(26,22,20,.28);
   --shadow-lift:0 2px 6px rgba(26,22,20,.07), 0 24px 48px -22px rgba(26,22,20,.35);
   --rail-w:272px;
+   [hidden]{display:none !important}
 
   --font-display:'Bricolage Grotesque', 'Instrument Sans', system-ui, sans-serif;
   --font-body:'Instrument Sans', system-ui, -apple-system, sans-serif;
@@ -371,6 +372,7 @@ fieldset.fgroup > legend::before{content:"";width:14px;height:2px;background:var
 
 /* ---------- palette ---------- */
 .palette{position:fixed;inset:0;background:rgba(20,16,14,.5);backdrop-filter:blur(3px);z-index:120;display:flex;justify-content:center;padding-top:11vh}
+.palette[hidden]{display:none}
 .palette-box{width:min(660px,92vw);background:var(--paper);border:1px solid var(--line-hard);border-radius:var(--r-m);box-shadow:var(--shadow-lift);overflow:hidden;height:fit-content;max-height:74vh;display:flex;flex-direction:column}
 .palette-box input{border:0;border-bottom:1px solid var(--line);border-radius:0;padding:15px 17px;font-size:16px}
 .palette-box input:focus{box-shadow:none}
